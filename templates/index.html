@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quoted Image App</title>
+</head>
+<body>
+{%  if flag %}
+<img src="https://source.unsplash.com/random/1200x800">
+    <h3>{{ quote }}</h3>
+{#    <img src="https://source.unsplash.com/collection/190727/1600x900">#}
+{% endif %}
+
+<form method='POST'>
+    {% csrf_token %}
+<button type='submit'> Generate me a new image </button>
+</form>
+
+
+</body>
+</html>
