@@ -44,7 +44,7 @@ class ImageEdit:
         image.save(name)
 
     def upload(self, name):
-        api_key = "key"
+        api_key = "paste your key here"
         url = "https://api.imgbb.com/1/upload"
         with open(name, 'rb') as file:
             payload = {"key": api_key, "image": base64.b64encode(file.read())}
